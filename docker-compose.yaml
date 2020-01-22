@@ -1,0 +1,5 @@
+container1:
+        image: centos:latest
+        ports:
+                - "139"
+        tty: true

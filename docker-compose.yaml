@@ -1,5 +1,6 @@
 container1:
-        image: centos:latest
+        image: fscontainer:latest
         ports:
-                - "139"
+                - "139:139"
+                - "445:445"
         tty: true

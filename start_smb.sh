@@ -2,3 +2,5 @@
 
 /usr/sbin/smbd start
 /usr/sbin/smbd enable
+
+/bin/bash

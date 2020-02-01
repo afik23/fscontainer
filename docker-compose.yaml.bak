@@ -1,4 +1,0 @@
-container1:
-        image: centos:latest
-        command: echo "test"
-        tty: true

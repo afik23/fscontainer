@@ -9,5 +9,8 @@ ENV CFG=/etc/samba/smb.conf
 ENV CFGADD=/cfgadd.conf
 RUN cat "$CFGADD" >> "$CFG"
 RUN chmod +x start_smb.sh
-RUN echo "root:toor123" | chpasswd
-#CMD ["start_smb.sh"]
+RUN echo "root:123456" | chpasswd
+ENV PASS=123456
+ENV SMBUSER=root
+RUN echo -ne "$PASS\n$PASS\n" | smbpasswd -a -s $SMBUSER
+ENTRYPOINT ["./start_smb.sh"]
